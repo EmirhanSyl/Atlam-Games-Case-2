@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+
+    private int woodAmount;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncreaseWood(int amount)
     {
-        
+        woodAmount += amount;
     }
 }

@@ -10,7 +10,10 @@ public class Tree : MonoBehaviour
     [SerializeField] private int treeHealth;
     [SerializeField] private int chopDamageCount = 3;
 
+    [SerializeField] private GameObject woodPiecePrefab;
+
     [SerializeField] private GameObject[] bodyStates;
+    [SerializeField] private Transform[] spawns;
 
     private float choppingTimer;
 
@@ -62,6 +65,16 @@ public class Tree : MonoBehaviour
     {
         treeHealth--;
         activeBodyIndex++;
+
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3 rot = new Vector3(0, Random.Range(0, 360), 0);
+
+            var instantiatedLog = Instantiate(woodPiecePrefab, transform.position, Quaternion.identity);
+            instantiatedLog.transform.DOMove(spawns[Random.Range(0, spawns.Length)].position, 0.6f);
+            instantiatedLog.transform.DORotate(rot, 0.6f);
+        }
+
         ChangeBodyState();
     }
 
@@ -70,7 +83,7 @@ public class Tree : MonoBehaviour
         for (int i = 0; i < bodyStates.Length; i++)
         {
             bodyStates[i].SetActive(false);
-        }
+        }        
 
         if (activeBodyIndex < bodyStates.Length)
         {
@@ -80,7 +93,6 @@ public class Tree : MonoBehaviour
         {
             DestroyTree();
         }
-
 
     }
 

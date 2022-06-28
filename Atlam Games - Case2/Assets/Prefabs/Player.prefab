@@ -1914,6 +1914,7 @@ GameObject:
   - component: {fileID: 7939858134864992405}
   - component: {fileID: 1073501919}
   - component: {fileID: 1073501917}
+  - component: {fileID: 2853279798560305023}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2005,7 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5204ec45bd7a0944aa528b44b345cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 3
   rotationSpeed: 500
 --- !u!114 &1073501917
 MonoBehaviour:
@@ -2020,3 +2021,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationStatesDropdown: 0
+--- !u!114 &2853279798560305023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939858134855510879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a71eaeb08c66914cb7a1f64cb811edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
