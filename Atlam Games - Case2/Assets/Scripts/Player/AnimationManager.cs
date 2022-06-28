@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public enum animationStates { idle, walk, chopping };
+    public animationStates animationStatesDropdown;
+
+    private Animator animator;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        SetAnimationStates();
+    }
+
+    void SetAnimationStates()
+    {
+        switch (animationStatesDropdown)
+        {
+            case animationStates.idle:
+                animator.SetBool("IsMoving", false);
+                break;
+            case animationStates.walk:
+                animator.SetBool("IsMoving", true);
+                break;
+            case animationStates.chopping:
+                animator.SetBool("Chop", true);
+                break;
+        }
+    }
+
+    public void UnChop()
+    {
+        animator.SetBool("Chop", false);
     }
 }
