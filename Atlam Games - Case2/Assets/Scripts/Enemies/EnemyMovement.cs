@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     private NavMeshAgent agent;
     private EnemyAttack enemyAttack;
+    private EnemyHealth enemyHealth;
     private Animator animator;
 
     void Start()
@@ -19,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         enemyAttack = GetComponent<EnemyAttack>();
+        enemyHealth = GetComponent<EnemyHealth>();
 
         if (animator == null)
         {
@@ -29,6 +31,11 @@ public class EnemyMovement : MonoBehaviour
     
     void Update()
     {
+        if (enemyHealth.IsDead())
+        {
+            agent.SetDestination(target.position);
+            return;
+        }
         GoToDestination();
     }
 

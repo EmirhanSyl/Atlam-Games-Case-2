@@ -5,18 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
-    [SerializeField] private float godModeDuration;
     [SerializeField] private float minDamageAmount;
     [SerializeField] private float maxDamageAmount;
 
-    //[SerializeField] private ParticleSystem damageParticles;
-
+    [SerializeField] private ParticleSystem damageParticles;
+     
     private float currentHealth;
 
-    private float godModeTimer;
-
     private bool isDead;
-    private bool godMode;
 
     private GameObject player;
     private Animator animator;
@@ -33,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        //damageParticles.gameObject.SetActive(false);
+        damageParticles.gameObject.SetActive(false);
 
         if (animator == null)
         {
@@ -48,33 +44,19 @@ public class EnemyHealth : MonoBehaviour
         {
             Dead();
         }
-
-        if (godMode)
-        {
-            godModeTimer += Time.deltaTime;
-            if (godModeTimer > godModeDuration)
-            {
-                godModeTimer = 0;
-                godMode = false;
-            }
-        }
     }
 
     public void DecreaseHealth()
     {
-        if (godMode)
-        {
-            return;
-        }
 
         float damage = Random.Range(minDamageAmount, maxDamageAmount);
         currentHealth -= damage;
 
         animator.SetTrigger("DamageTaken");
+        healthBar.SetHealth(currentHealth);
 
         damageParticles.gameObject.SetActive(true);
         damageParticles.Play();
-        godMode = true;
     }
 
     void Dead()
@@ -86,7 +68,7 @@ public class EnemyHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         IEnumerator Destroy()
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
 
             gameObject.SetActive(false);
         }

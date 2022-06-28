@@ -128,5 +128,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a3e9fc04e808f4dac2a6fcd3edd5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
+  movementSpeed: 25
   collesionFX: {fileID: 0}
