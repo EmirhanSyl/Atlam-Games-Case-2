@@ -6,12 +6,13 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float godModeDuration;
-    [SerializeField] private ParticleSystem damageParticles;
+    [SerializeField] private float minDamageAmount;
+    [SerializeField] private float maxDamageAmount;
+
+    //[SerializeField] private ParticleSystem damageParticles;
 
     private float currentHealth;
 
-    private float minDamageAmount;
-    private float maxDamageAmount;
     private float godModeTimer;
 
     private bool isDead;
@@ -30,8 +31,9 @@ public class EnemyHealth : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
 
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
 
-        damageParticles.gameObject.SetActive(false);
+        //damageParticles.gameObject.SetActive(false);
 
         if (animator == null)
         {
@@ -81,10 +83,10 @@ public class EnemyHealth : MonoBehaviour
         animator.SetTrigger("Dead");
         StartCoroutine(Destroy());
 
-        //Destroying animations...
+        healthBar.SetHealth(currentHealth);
         IEnumerator Destroy()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(3f);
 
             gameObject.SetActive(false);
         }
