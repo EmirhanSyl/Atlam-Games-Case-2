@@ -6,21 +6,27 @@ public class EnemyDetector : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
 
-    public GameObject targetEnemy;
+    private GameObject targetEnemy;
     private Collider[] enemyColls;
+
+    private ArcherAttack archerAttack;
 
     void Start()
     {
-
+        archerAttack = GetComponent<ArcherAttack>();
     }
 
     void Update()
     {
-
         DetectEnemy();
         if (!targetEnemy.activeSelf)
         {
             targetEnemy = null;
+        }
+
+        if (targetEnemy != null)
+        {
+            archerAttack.Attack(targetEnemy);
         }
     }
 
