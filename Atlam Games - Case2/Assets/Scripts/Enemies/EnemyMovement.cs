@@ -19,6 +19,11 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         enemyAttack = GetComponent<EnemyAttack>();
+
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     
@@ -33,14 +38,20 @@ public class EnemyMovement : MonoBehaviour
         {
             target = attackLocations[Random.Range(0, attackLocations.Length)];
         }
+        
 
-        agent.SetDestination(target.position);
-        transform.DOLookAt(target.transform.position, 0.4f);
-
-        if ((target.position - transform.position).magnitude <= 0.1f)
+        if ((target.position - transform.position).magnitude <= 0.2f)
         {
             agent.SetDestination(transform.position);
             enemyAttack.Attack();
+            animator.SetBool("IsMoving", false);
+        }
+        else
+        {
+            agent.SetDestination(target.position);
+            transform.DOLookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z), 0.4f);
+
+            animator.SetBool("IsMoving", true);
         }
     }
 }

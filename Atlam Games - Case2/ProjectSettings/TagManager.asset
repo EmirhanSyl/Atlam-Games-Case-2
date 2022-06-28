@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnPoint
   - Log
+  - Arrow
   layers:
   - Default
   - TransparentFX

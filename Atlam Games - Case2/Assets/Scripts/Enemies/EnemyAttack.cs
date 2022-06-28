@@ -12,6 +12,11 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     public void Attack()
