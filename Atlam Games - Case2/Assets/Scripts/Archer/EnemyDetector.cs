@@ -19,7 +19,7 @@ public class EnemyDetector : MonoBehaviour
     void Update()
     {
         DetectEnemy();
-        if (!targetEnemy.activeSelf)
+        if (targetEnemy != null && !targetEnemy.activeSelf)
         {
             targetEnemy = null;
         }

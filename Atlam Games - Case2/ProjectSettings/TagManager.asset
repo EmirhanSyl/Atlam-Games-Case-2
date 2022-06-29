@@ -8,6 +8,7 @@ TagManager:
   - Log
   - Arrow
   - Monster
+  - MonsterTarget
   layers:
   - Default
   - TransparentFX

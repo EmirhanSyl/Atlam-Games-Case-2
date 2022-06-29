@@ -6,8 +6,7 @@ using DG.Tweening;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] Transform[] attackLocations;
-
+    private GameObject[] attackLocations;
     private Transform target;
 
     private NavMeshAgent agent;
@@ -26,6 +25,8 @@ public class EnemyMovement : MonoBehaviour
         {
             animator = GetComponentInChildren<Animator>();
         }
+
+        attackLocations = GameObject.FindGameObjectsWithTag("MonsterTarget");
     }
 
     
@@ -33,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (enemyHealth.IsDead())
         {
-            agent.SetDestination(target.position);
+            StartCoroutine(WaitForDie());
             return;
         }
         GoToDestination();
@@ -43,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (target == null)
         {
-            target = attackLocations[Random.Range(0, attackLocations.Length)];
+            target = attackLocations[Random.Range(0, attackLocations.Length)].transform;
         }
         
 
@@ -60,5 +61,11 @@ public class EnemyMovement : MonoBehaviour
 
             animator.SetBool("IsMoving", true);
         }
+    }
+
+    IEnumerator WaitForDie()
+    {
+        yield return new WaitForSeconds(0.6f);
+        agent.SetDestination(transform.position);
     }
 }

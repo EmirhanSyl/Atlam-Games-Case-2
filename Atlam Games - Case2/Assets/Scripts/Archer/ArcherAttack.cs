@@ -29,7 +29,7 @@ public class ArcherAttack : MonoBehaviour
         target = _target;
         attackTimer += Time.deltaTime;
 
-        transform.DOLookAt(target.transform.position, 0.4f);
+        transform.DOLookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z), 0.4f);
         if (attackTimer >= attackDuration)
         {
             animator.SetTrigger("Attack");            
