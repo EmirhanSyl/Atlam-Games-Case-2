@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30e91e2f7044594da4cc070b86ac09d, type: 3}
+  m_Name: RaidUnits Informations
+  m_EditorClassIdentifier: 
+  brownSpiderCount_Raid1: 0
+  greenSpiderCount_Raid1: 0
+  greySpiderCount_Raid1: 0
+  zombieLegCount_Raid1: 0
+  zombieLegMetalicCount_Raid1: 0
+  brownSpiderCount_Raid2: 0
+  greenSpiderCount_Raid2: 0
+  greySpiderCount_Raid2: 0
+  zombieLegCount_Raid2: 0
+  zombieLegMetalicCount_Raid2: 0
+  brownSpiderCount_Raid3: 0
+  greenSpiderCount_Raid3: 0
+  greySpiderCount_Raid3: 0
+  zombieLegCount_Raid3: 0
+  zombieLegMetalicCount_Raid3: 0
+  brownSpiderCount_Raid4: 0
+  greenSpiderCount_Raid4: 0
+  greySpiderCount_Raid4: 0
+  zombieLegCount_Raid4: 0
+  zombieLegMetalicCount_Raid4: 0
+  brownSpiderCount_Raid5: 0
+  greenSpiderCount_Raid5: 0
+  greySpiderCount_Raid5: 0
+  zombieLegCount_Raid5: 0
+  zombieLegMetalicCount_Raid5: 0
