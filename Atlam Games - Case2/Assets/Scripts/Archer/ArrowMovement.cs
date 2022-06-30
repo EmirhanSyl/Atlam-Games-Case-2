@@ -10,10 +10,16 @@ public class ArrowMovement : MonoBehaviour
     private float deactivationTimer;
     private bool charge;
 
+    private Transform target;
+
     void Update()
     {
         if (charge)
         {
+            if (target != null)
+            {
+                transform.LookAt(target.position + new Vector3(0, 0.3f, 0));
+            }
             transform.Translate(Time.deltaTime * movementSpeed * Vector3.forward);
             DeactivationTimer();
         }
@@ -21,7 +27,8 @@ public class ArrowMovement : MonoBehaviour
 
     public void ChargeToEnemy(Transform targetTransform)
     {
-        transform.LookAt(targetTransform.position);
+        target = targetTransform;
+        transform.LookAt(targetTransform.position + new Vector3(0,0.3f,0));
         charge = true;
     }
 

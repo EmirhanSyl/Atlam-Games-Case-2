@@ -12,28 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30e91e2f7044594da4cc070b86ac09d, type: 3}
   m_Name: RaidUnits Informations
   m_EditorClassIdentifier: 
-  brownSpiderCount_Raid1: 0
-  greenSpiderCount_Raid1: 0
+  timeBeforeRaid1: 0
+  brownSpiderCount_Raid1: 2
+  greenSpiderCount_Raid1: 1
   greySpiderCount_Raid1: 0
   zombieLegCount_Raid1: 0
   zombieLegMetalicCount_Raid1: 0
-  brownSpiderCount_Raid2: 0
-  greenSpiderCount_Raid2: 0
+  timeBeforeRaid2: 0
+  brownSpiderCount_Raid2: 3
+  greenSpiderCount_Raid2: 1
   greySpiderCount_Raid2: 0
-  zombieLegCount_Raid2: 0
+  zombieLegCount_Raid2: 2
   zombieLegMetalicCount_Raid2: 0
-  brownSpiderCount_Raid3: 0
-  greenSpiderCount_Raid3: 0
-  greySpiderCount_Raid3: 0
-  zombieLegCount_Raid3: 0
+  timeBeforeRaid3: 0
+  brownSpiderCount_Raid3: 2
+  greenSpiderCount_Raid3: 2
+  greySpiderCount_Raid3: 1
+  zombieLegCount_Raid3: 1
   zombieLegMetalicCount_Raid3: 0
-  brownSpiderCount_Raid4: 0
-  greenSpiderCount_Raid4: 0
-  greySpiderCount_Raid4: 0
-  zombieLegCount_Raid4: 0
-  zombieLegMetalicCount_Raid4: 0
-  brownSpiderCount_Raid5: 0
-  greenSpiderCount_Raid5: 0
-  greySpiderCount_Raid5: 0
-  zombieLegCount_Raid5: 0
-  zombieLegMetalicCount_Raid5: 0
+  timeBeforeRaid4: 0
+  brownSpiderCount_Raid4: 4
+  greenSpiderCount_Raid4: 2
+  greySpiderCount_Raid4: 2
+  zombieLegCount_Raid4: 2
+  zombieLegMetalicCount_Raid4: 1
+  timeBeforeRaid5: 0
+  brownSpiderCount_Raid5: 3
+  greenSpiderCount_Raid5: 3
+  greySpiderCount_Raid5: 3
+  zombieLegCount_Raid5: 3
+  zombieLegMetalicCount_Raid5: 2

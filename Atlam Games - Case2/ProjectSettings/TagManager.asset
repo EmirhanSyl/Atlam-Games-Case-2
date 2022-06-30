@@ -9,6 +9,11 @@ TagManager:
   - Arrow
   - Monster
   - MonsterTarget
+  - TopSpawn
+  - DownSpawn
+  - LeftSpawn
+  - RightSpawn
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
