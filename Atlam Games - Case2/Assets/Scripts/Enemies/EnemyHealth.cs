@@ -52,7 +52,10 @@ public class EnemyHealth : MonoBehaviour
         float damage = Random.Range(minDamageAmount, maxDamageAmount);
         currentHealth -= damage;
 
-        animator.SetTrigger("DamageTaken");
+        if (!isDead)
+        {
+            animator.SetTrigger("DamageTaken");
+        }
         healthBar.SetHealth(currentHealth);
 
         damageParticles.gameObject.SetActive(true);
