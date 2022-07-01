@@ -3,4 +3,3 @@ Another hypercasual game prototype for Atlam Games. Made with Unity in 1 week in
 
 ## Youtube Video:
 https://youtu.be/quaUA3zwKPo
-Finished
