@@ -15,6 +15,8 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private GameObject zombieLegPrefab;
     [SerializeField] private GameObject zombieLegMetalicPrefab;
 
+    [SerializeField] private GameObject monsterObject;
+
     private float raidTimer;
 
     private int raidCount = 1;
@@ -46,6 +48,15 @@ public class SpawnEnemies : MonoBehaviour
         }
 
         GameManager.instance.RaidText((int)(raidDuration - raidTimer));
+
+        if (raidCount == 5)
+        {
+            raidTimer = 0;
+            if (monsterObject.transform.childCount == 0)
+            {
+                GameManager.instance.GameOver();
+            }
+        }
     }
 
     void RaidIsComing()
@@ -61,115 +72,140 @@ public class SpawnEnemies : MonoBehaviour
 
                 for (int i = 0; i < raid.brownSpiderCount_Raid1; i++)
                 {
-                    Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greenSpiderCount_Raid1; i++)
                 {
-                    Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greySpiderCount_Raid1; i++)
                 {
-                    Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegCount_Raid1; i++)
                 {
-                    Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegMetalicCount_Raid1; i++)
                 {
-                    Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 break;
 
             case 2:
                 for (int i = 0; i < raid.brownSpiderCount_Raid2; i++)
                 {
-                    Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greenSpiderCount_Raid2; i++)
                 {
-                    Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greySpiderCount_Raid2; i++)
                 {
-                    Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegCount_Raid2; i++)
                 {
-                    Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegMetalicCount_Raid2; i++)
                 {
-                    Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 break;
 
             case 3:
                 for (int i = 0; i < raid.brownSpiderCount_Raid3; i++)
                 {
-                    Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greenSpiderCount_Raid3; i++)
                 {
-                    Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greySpiderCount_Raid3; i++)
                 {
-                    Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegCount_Raid3; i++)
                 {
-                    Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegMetalicCount_Raid3; i++)
                 {
-                    Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 break;
 
             case 4:
                 for (int i = 0; i < raid.brownSpiderCount_Raid4; i++)
                 {
-                    Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greenSpiderCount_Raid4; i++)
                 {
-                    Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greySpiderCount_Raid4; i++)
                 {
-                    Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegCount_Raid4; i++)
                 {
-                    Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegMetalicCount_Raid4; i++)
                 {
-                    Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 break;
 
             case 5:
                 for (int i = 0; i < raid.brownSpiderCount_Raid5; i++)
                 {
-                    Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(brownSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greenSpiderCount_Raid5; i++)
                 {
-                    Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greenSpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.greySpiderCount_Raid5; i++)
                 {
-                    Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(greySpiderPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegCount_Raid5; i++)
                 {
-                    Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 for (int i = 0; i < raid.zombieLegMetalicCount_Raid5; i++)
                 {
-                    Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    var monster = Instantiate(zombieLegMetalicPrefab, raidWay[Random.Range(0, raidWay.Length)].transform.position, Quaternion.identity);
+                    monster.transform.parent = monsterObject.transform;
                 }
                 break;
         }

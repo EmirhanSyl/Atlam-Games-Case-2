@@ -20741,6 +20741,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7571598201592753815}
     m_Modifications:
     - target: {fileID: 1174354438, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 7970353376366455676, guid: 6758ab0982378384ba5a2b8d323f0f9b, type: 3}
+    - target: {fileID: 1174354438, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: attackOfsetDuration
       value: 0.5
       objectReference: {fileID: 0}

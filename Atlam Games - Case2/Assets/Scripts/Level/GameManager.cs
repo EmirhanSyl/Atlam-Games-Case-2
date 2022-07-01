@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +12,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text woodCountText;
     [SerializeField] private TMP_Text raidTimeText;
     [SerializeField] private TMP_Text raidCountText;
+    [SerializeField] private TMP_Text totalSurviveTimeText;
 
+    [SerializeField] private GameObject gameOverPanel;
+
+    private float totalSurviveTime;
     private int woodAmount;
 
     void Awake()
@@ -23,6 +28,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         woodCountText.text = woodAmount.ToString();
+        totalSurviveTime += Time.deltaTime;
     }
 
     public void RaidText(int remainTime)
@@ -67,6 +73,14 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
+        totalSurviveTimeText.text = "YOU SURVIVED FOR " + ((int)totalSurviveTime).ToString() + "SECONDS!";
+    }
 
+    public void RestartButton()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }

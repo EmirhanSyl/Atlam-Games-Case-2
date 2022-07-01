@@ -8,6 +8,7 @@ public class BaseBuilding : MonoBehaviour
 
     [SerializeField] private float maxHealth;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthBar generalHealthBar;
 
     private float currentHealth;
 
@@ -17,12 +18,14 @@ public class BaseBuilding : MonoBehaviour
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        generalHealthBar.SetMaxHealth(maxHealth);
     }
 
     
     void Update()
     {
         healthBar.SetHealth(currentHealth);
+        generalHealthBar.SetHealth(currentHealth);
     }
 
     public void DecreaseHealth(float amount)

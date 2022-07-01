@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ArrowMovement : MonoBehaviour
 {
@@ -16,10 +17,6 @@ public class ArrowMovement : MonoBehaviour
     {
         if (charge)
         {
-            if (target != null)
-            {
-                transform.LookAt(target.position + new Vector3(0, 0.3f, 0));
-            }
             transform.Translate(Time.deltaTime * movementSpeed * Vector3.forward);
             DeactivationTimer();
         }
@@ -28,7 +25,8 @@ public class ArrowMovement : MonoBehaviour
     public void ChargeToEnemy(Transform targetTransform)
     {
         target = targetTransform;
-        transform.LookAt(targetTransform.position + new Vector3(0,0.3f,0));
+
+        transform.LookAt(targetTransform.position + new Vector3(0, 0.3f, 0));
         charge = true;
     }
 
@@ -45,7 +43,7 @@ public class ArrowMovement : MonoBehaviour
         {
             deactivationTimer = 0;
 
-            Instantiate(collesionFX, transform.position, Quaternion.identity);
+            //Instantiate(collesionFX, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
     }

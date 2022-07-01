@@ -67,6 +67,18 @@ PrefabInstance:
       propertyPath: attackLocations.Array.data[14]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1670807440170742246, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
+      propertyPath: maxHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670807440170742247, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
+      propertyPath: maxAttackDamage
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670807440170742247, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
+      propertyPath: minAttackDamage
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6814566659578820612, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -113,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6814566659578820731, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
       propertyPath: m_Name
-      value: Zombie leg_Metalic
+      value: Zombie leg_Metalic Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6814566659614239238, guid: 0f167ab7f0cb2f9428f1344add82b761, type: 3}
       propertyPath: m_Materials.Array.data[0]

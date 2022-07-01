@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4322784136027824311, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
       propertyPath: m_Name
-      value: spider_green
+      value: spider_green Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732963318370142208, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
+      propertyPath: maxAttackDamage
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5732963318370142209, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
       propertyPath: attackLocations.Array.data[0]
@@ -117,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5732963318370142222, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8075688058060426059, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
       propertyPath: m_Materials.Array.data[0]

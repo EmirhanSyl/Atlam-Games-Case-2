@@ -32,7 +32,7 @@ public class EnemyDetector : MonoBehaviour
 
     void DetectEnemy()
     {
-        enemyColls = Physics.OverlapSphere(transform.position, 40f, layerMask);
+        enemyColls = Physics.OverlapSphere(transform.position, 25f, layerMask);
 
         float distanceToClosestEnemy = Mathf.Infinity;
         GameObject closestEnemy = null;

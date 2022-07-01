@@ -456,7 +456,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -150.47998, y: 0, z: -169.90027, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -628,6 +628,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1510180026203631869}
     m_Modifications:
+    - target: {fileID: 7566938744427078625, guid: 51d6df4ba78bd1040b1f5bf3a3d315a6, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 7970353376366455676, guid: 6758ab0982378384ba5a2b8d323f0f9b, type: 3}
     - target: {fileID: 7567556478953626775, guid: 51d6df4ba78bd1040b1f5bf3a3d315a6, type: 3}
       propertyPath: m_Name
       value: ArcherTower
