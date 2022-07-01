@@ -309,7 +309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -530,6 +530,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013374531}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &23129031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23129032}
+  m_Layer: 0
+  m_Name: Logs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23129032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23129031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &30618046
 GameObject:
@@ -1553,7 +1583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178164950}
   m_LocalRotation: {x: -0.3871156, y: 0.00203079, z: -0.001669908, w: -0.92202747}
-  m_LocalPosition: {x: 15.234989, y: 10.830826, z: 2.8194048}
+  m_LocalPosition: {x: 0.32, y: 10.830826, z: -15.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1644,7 +1674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -1847,7 +1877,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -1955,7 +1985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -2788,7 +2818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -3048,6 +3078,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422270491}
   m_CullTransparentMesh: 1
+--- !u!1 &431998748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431998750}
+  - component: {fileID: 431998749}
+  m_Layer: 0
+  m_Name: ArrowPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &431998749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431998748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8890fa809fd1157419004b843ec8c928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 7970353376366455676, guid: 6758ab0982378384ba5a2b8d323f0f9b, type: 3}
+  arrowsStorageObject: {fileID: 1737519249}
+--- !u!4 &431998750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431998748}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1890012979}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &432920302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4486701237158789636, guid: f71d60554e0b0e54daf983155776c6c5, type: 3}
@@ -3252,7 +3327,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -4615,7 +4690,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -5251,75 +5326,6 @@ Transform:
   m_Father: {fileID: 2013374531}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &762753430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 22.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510078619987851789, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4322784136027824311, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_Name
-      value: spider_brown
-      objectReference: {fileID: 0}
-    - target: {fileID: 4322784136027824311, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4780372661979571769, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4780372661979571769, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 257be3f5a9678434582bc2ea39ca093a, type: 3}
 --- !u!1001 &768171177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5426,7 +5432,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -6167,7 +6173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -6692,7 +6698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -7650,7 +7656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1045219386
 PrefabInstance:
@@ -8471,7 +8477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -8721,7 +8727,7 @@ RectTransform:
   - {fileID: 855574864}
   - {fileID: 1231413344}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9076,7 +9082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -9154,7 +9160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -10888,7 +10894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1458551097
 PrefabInstance:
@@ -11353,7 +11359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -11466,7 +11472,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -12467,6 +12473,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4486701237158789636, guid: f71d60554e0b0e54daf983155776c6c5, type: 3}
   m_PrefabInstance: {fileID: 2260642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1737519249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737519250}
+  m_Layer: 0
+  m_Name: Arrows
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737519250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737519249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1738850011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
@@ -12837,7 +12873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808289206}
   m_Layer: 0
-  m_Name: ------------ENEMIES--------------
+  m_Name: --------MULTIPLE OBJECTS--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12855,7 +12891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1813516913 stripped
 Transform:
@@ -12901,7 +12937,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -13585,6 +13621,38 @@ Transform:
   m_Father: {fileID: 828974877}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1890012978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890012979}
+  m_Layer: 0
+  m_Name: Poolers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1890012979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890012978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 431998750}
+  - {fileID: 1933295968}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1891474241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13806,6 +13874,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4486701237158789636, guid: f71d60554e0b0e54daf983155776c6c5, type: 3}
   m_PrefabInstance: {fileID: 1045219386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1933295967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1933295968}
+  - component: {fileID: 1933295969}
+  m_Layer: 0
+  m_Name: LogPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933295968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933295967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1890012979}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933295969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933295967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f065c51bba0cc4e9cce6f4fa85ba36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logPrefab: {fileID: 1387366977653335247, guid: 53518cb1b2c11ce4cac596ab4a3e4a26, type: 3}
+  logsMainObject: {fileID: 23129031}
 --- !u!4 &1937746933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4486701237158789636, guid: f71d60554e0b0e54daf983155776c6c5, type: 3}
@@ -13962,7 +14075,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -14180,7 +14293,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -14359,7 +14472,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -14432,7 +14545,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder
@@ -14757,7 +14870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7939858134855153535, guid: 078e30bf3725f184f903bcf04bc7b3e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.99
+      value: 0.0750103
       objectReference: {fileID: 0}
     - target: {fileID: 7939858134855153535, guid: 078e30bf3725f184f903bcf04bc7b3e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14765,7 +14878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7939858134855153535, guid: 078e30bf3725f184f903bcf04bc7b3e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.42
+      value: -4.579405
       objectReference: {fileID: 0}
     - target: {fileID: 7939858134855153535, guid: 078e30bf3725f184f903bcf04bc7b3e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14925,7 +15038,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34900667, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: requiredWoodAmountToBuild
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510180026203631869, guid: 840a8c74668af004e9c61f013380e4f6, type: 3}
       propertyPath: m_RootOrder

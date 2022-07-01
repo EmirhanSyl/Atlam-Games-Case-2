@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f11da5b0671a854e99e9c4ea2aa4ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredWoodAmountToBuild: 40
+  requiredWoodAmountToBuild: 0
   whellImage: {fileID: 1200442424198141315}
   whellImageBG: {fileID: 1414782486775341708}
   requirementText: {fileID: 6732306854417263234}

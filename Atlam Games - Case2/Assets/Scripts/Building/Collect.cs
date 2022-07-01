@@ -17,8 +17,7 @@ public class Collect : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             gameManager.IncreaseWood(1);
-
-            //Object pooling...
+            LogPooler.Instance.AddPool(other.gameObject);
         }
     }
 }

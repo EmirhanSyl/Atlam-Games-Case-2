@@ -6,7 +6,6 @@ using DG.Tweening;
 public class ArrowMovement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
-    [SerializeField] private GameObject collesionFX;
 
     private float deactivationTimer;
     private bool charge;
@@ -37,13 +36,13 @@ public class ArrowMovement : MonoBehaviour
             other.gameObject.GetComponent<EnemyHealth>().DecreaseHealth();
 
             deactivationTimer = 0;
+            ArrowPooler.instance.AddPool(gameObject);
             gameObject.SetActive(false);
         }
         else if (other.gameObject.layer == 7) //7 = Wall layer
         {
-            deactivationTimer = 0;
-
-            //Instantiate(collesionFX, transform.position, Quaternion.identity);
+            deactivationTimer = 0;            
+            ArrowPooler.instance.AddPool(gameObject);
             gameObject.SetActive(false);
         }
     }
@@ -54,6 +53,7 @@ public class ArrowMovement : MonoBehaviour
         if (deactivationTimer > 6)
         {
             deactivationTimer = 0;
+            ArrowPooler.instance.AddPool(gameObject);
             gameObject.SetActive(false);
         }
     }

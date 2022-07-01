@@ -70,9 +70,9 @@ public class Tree : MonoBehaviour
         {
             Vector3 rot = new Vector3(0, Random.Range(0, 360), 0);
 
-            var instantiatedLog = Instantiate(woodPiecePrefab, transform.position, Quaternion.identity);
-            instantiatedLog.transform.DOMove(spawns[Random.Range(0, spawns.Length)].position, 0.6f);
-            instantiatedLog.transform.DORotate(rot, 0.6f);
+            var log = LogPooler.Instance.CreateObject(transform.position, Quaternion.identity);
+            log.transform.DOMove(spawns[Random.Range(0, spawns.Length)].position, 0.6f);
+            log.transform.DORotate(rot, 0.6f);
         }
 
         ChangeBodyState();

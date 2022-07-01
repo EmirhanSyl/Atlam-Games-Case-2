@@ -51,7 +51,9 @@ public class ArcherAttack : MonoBehaviour
 
     void ThrowArrow()
     {
-        var arrow = Instantiate(arrowPrefab, bowInitLocation.position, Quaternion.identity);
+        var arrow = ArrowPooler.instance.CreateProjectile(bowInitLocation.position, Quaternion.identity);
         arrow.GetComponent<ArrowMovement>().ChargeToEnemy(target.transform);
+        //var arrow = Instantiate(arrowPrefab, bowInitLocation.position, Quaternion.identity);
+        //arrow.GetComponent<ArrowMovement>().ChargeToEnemy(target.transform);
     }
 }
